@@ -1,3 +1,8 @@
+<?php 
+ini_set('max_execution_time', '300');
+$json = json_decode(file_get_contents("train.json"));
+$categ = array_keys((array)$json[0]);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +27,10 @@
     <link rel="stylesheet" href="assets/css/templatemo-Underdogs-v1.css">
     <link rel="stylesheet" href="assets/css/animated.css">
     <link rel="stylesheet" href="assets/css/owl.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" ></script>
 <!--
 
 TemplateMo 568 Underdogs
@@ -31,7 +40,7 @@ https://templatemo.com/tm-568-Underdogs
 -->
   </head>
 
-<body>
+<body class="large-screen">
 
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
@@ -128,6 +137,35 @@ https://templatemo.com/tm-568-Underdogs
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div class="table-wrapper">
+          <table class="table-responsive card-list-table">
+            <thead>
+              <tr>
+                <?php
+                  for ($i = 0; $i < sizeof($categ); $i++){ ?>
+                    <th> <?php echo $categ[$i] ?></th>
+                  <?php }
+                ?>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+                  for ($y = 0; $y < sizeof($json); $y++){ ?>
+                    <tr>
+                      <?php
+                        for ($i = 0; $i < sizeof($categ); $i++){ ?>
+                          <td data-title="Column #<?php echo $i ?>"><?php echo array_column($json, $categ[$i])[$y] ?></td>
+                        <?php }
+                      ?>
+                    </tr>
+                  <?php }
+                ?>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
