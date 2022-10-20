@@ -1,8 +1,3 @@
-<?php 
-ini_set('max_execution_time', '300');
-$json = json_decode(file_get_contents("train.json"));
-$categ = array_keys((array)$json[0]);
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,10 +22,6 @@ $categ = array_keys((array)$json[0]);
     <link rel="stylesheet" href="assets/css/templatemo-Underdogs-v1.css">
     <link rel="stylesheet" href="assets/css/animated.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link href="styles.css" rel="stylesheet">
-    <script src="script.js" ></script>
 <!--
 
 TemplateMo 568 Underdogs
@@ -85,7 +76,7 @@ https://templatemo.com/tm-568-Underdogs
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
+            <a href="index.php" class="logo">
               <img src="assets/images/logo.png" alt="">
             </a>
             <!-- ***** Logo End ***** -->
@@ -96,8 +87,8 @@ https://templatemo.com/tm-568-Underdogs
               <li class="scroll-to-section"><a href="#services">Services</a></li>
               <li class="scroll-to-section"><a href="#portfolio">Projects</a></li>
               <li class="scroll-to-section"><a href="#blog">Blog</a></li>
-              <li class="scroll-to-section"><a href="maquette.php">Stat</a></li>
-              <li class="scroll-to-section"><div class="border-first-button"><a href="#contact">Contact</a></div></li> 
+              <li class="scroll-to-section"><a href="#contact">Contact</a></li>
+              <li class="scroll-to-section"><div class="border-first-button"><a href="maquette_simple.php">Information Table</a></div></li> 
             </ul>        
             <a class='menu-trigger'>
                 <span>Menu</span>
@@ -120,7 +111,7 @@ https://templatemo.com/tm-568-Underdogs
                 <div class="row">
                   <div class="col-lg-12">
                     <h6>Machine Learning Professional</h6>
-                    <h2>We </h2>
+                    <h2>Our technology at your fingertips</h2>
                     <p> </p>
                   </div>
                   <div class="col-lg-12">
@@ -139,38 +130,28 @@ https://templatemo.com/tm-568-Underdogs
           </div>
         </div>
       </div>
-
-      <div class="wrap">
-        <div class="table-wrapper">
-          <table class="table-responsive card-list-table">
-            <thead>
-              <tr>
-                <?php
-                  for ($i = 0; $i < sizeof($categ); $i++){ ?>
-                    <th> <?php echo $categ[$i] ?></th>
-                  <?php }
-                ?>
-              </tr>
-            </thead>
-            <tbody>
-              <?php
-                  for ($y = 0; $y < sizeof($json); $y++){ ?>
-                    <tr>
-                      <?php
-                        for ($i = 0; $i < sizeof($categ); $i++){ ?>
-                          <td data-title="Column #<?php echo $i ?>"><?php echo array_column($json, $categ[$i])[$y] ?></td>
-                        <?php }
-                      ?>
-                    </tr>
-                  <?php }
-                ?>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      <?php //require 'maquette.php'; ?>
     </div>
   </div>
   <div id="about" class="about section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-heading devices  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+                <h6>All Devices</h6>
+                <h4>Phone/Pad/PC <em>Support</em></h4>
+                <div class="line-dec line-d"></div>
+              </div>
+            </div>
+            <div class="col-lg-12 img-device">
+              <img src="assets/images/all-devices.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -187,7 +168,7 @@ https://templatemo.com/tm-568-Underdogs
                   <h4>Who is Underdogs <em>Agency</em></h4>
                   <div class="line-dec"></div>
                 </div>
-                <p>We hope this Underdogs template is useful for your work. You can use this template for any purpose. You may <a rel="nofollow" href="http://paypal.me/templatemo" target="_blank">contribute a little amount</a> via PayPal to <a href="https://templatemo.com/contact" target="_blank">support TemplateMo</a> in creating new templates regularly.</p>
+                <p>We hope this Underdogs is useful for your work. <a rel="nofollow" href="http://paypal.me/templatemo" target="_blank">contribute a little amount</a> via PayPal to <a href="https://templatemo.com/contact" target="_blank">support Us</a>.</p>
                 <div class="row">
                   <div class="col-lg-4 col-sm-4">
                     <div class="skill-item first-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">

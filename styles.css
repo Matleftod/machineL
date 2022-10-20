@@ -1,3 +1,7 @@
+.table-stat{
+  margin-top: 50px;
+}
+
 ::-webkit-scrollbar {
   width: 0.15em;
   height: 0.15em;
@@ -58,7 +62,7 @@ body.large-screen .card-list-table thead th:last-child {
 body.large-screen .card-list-table thead th {
   border-bottom: 1px solid #dfdfdf;
   padding: 12px 24px;
-  width: 100px;
+  width: 140px;
 }
 body.large-screen .card-list-table tbody tr {
   display: table-row;
@@ -82,7 +86,10 @@ body.large-screen .card-list-table tbody td:before {
   content: '';
 }
 body.large-screen .card-list-table tbody tr:hover td {
-  background: #63b9ff;
+  background: #6eaad6;
+}
+td:hover{
+  background-color: #427aa2 !important;
 }
 .buttons {
   margin: 10px 0 50px;

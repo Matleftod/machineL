@@ -1,6 +1,6 @@
 <?php 
 ini_set('max_execution_time', '300');
-$json = json_decode(file_get_contents("train.json"));
+$json = json_decode(file_get_contents("train_simple.json"));
 $categ = array_keys((array)$json[0]);
 ?>
 <!DOCTYPE html>
@@ -43,7 +43,7 @@ $categ = array_keys((array)$json[0]);
               <!-- ***** Logo End ***** -->
               <!-- ***** Menu Start ***** -->
               <ul class="nav">
-                <li class="scroll-to-section"><a href="maquette_simple.php">Simple info</a></li>
+                <li class="scroll-to-section"><a href="maquette.php">All info</a></li>
                 <li class="scroll-to-section"><div class="border-first-button"><a href="index.php">Retour</a></div></li> 
               </ul>        
               <a class='menu-trigger'>
